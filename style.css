@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: ;
+}
+
+:root {
+  --text-orange: rgb(255, 136, 0);
+  --text-purple: rgb(161, 3, 148);
+  --text-green: rgb(25, 175, 32);
+  --main-text-color: var(--text-green);
+
+  --height: 400px;
+  --width: 700px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+#vanta-net {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mac-window {
+  /* height: 60%; */
+  /* width: 50%; */
+  height: var(--height);
+  width: var(--width);
+  background: rgba(0, 0, 0, 0.734);
+  box-shadow: 1px 1px 20px 0.1px var(--main-text-color);
+  border-radius: 0.75rem;
+  transform: scale(1.2);
+}
+
+.mac-header {
+  background: rgb(37, 37, 37);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  /* border-radius: 0.75rem; */
+}
+
+.mac-icons {
+  width: 15%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mac-icon {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 1px 1px 10px 1px gray;
+  margin: 0 5px;
+}
+
+.red-btn {
+  background: red;
+}
+.yellow-btn {
+  background: rgb(255, 230, 0);
+}
+.green-btn {
+  background: green;
+}
+
+.terminal {
+  color: var(--main-text-color);
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --height: 200px;
+    --width: 90%;
+  }
+
+  .mac-icons {
+    width: 35%;
+  }
+}
