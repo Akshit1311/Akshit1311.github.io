@@ -1,8 +1,10 @@
 * {
   margin: 0;
   padding: ;
+  font-family: "Share Tech Mono", monospace;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Share+Tech+Mono&display=swap");
 :root {
   --text-orange: rgb(255, 136, 0);
   --text-purple: rgb(161, 3, 148);
@@ -11,9 +13,16 @@
 
   --height: 400px;
   --width: 700px;
+
+  --mob-text: 1rem;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@media screen and (max-width: 800px) {
+  :root {
+    --height: 200px;
+    --width: 70%;
+  }
+}
 
 #vanta-net {
   height: 100vh;
@@ -24,8 +33,6 @@
 }
 
 .mac-window {
-  /* height: 60%; */
-  /* width: 50%; */
   height: var(--height);
   width: var(--width);
   background: rgba(0, 0, 0, 0.734);
@@ -72,16 +79,52 @@
   color: var(--main-text-color);
   font-size: 2rem;
   padding: 1rem 1rem;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
 }
 
 @media screen and (max-width: 800px) {
-  :root {
-    --height: 200px;
-    --width: 90%;
-  }
-
   .mac-icons {
     width: 35%;
+  }
+
+  .terminal {
+    font-size: var(--mob-text);
+  }
+}
+
+/* Projects */
+
+.projects {
+  height: 100vh;
+  padding: 3rem 0;
+}
+
+.proj-heading {
+  font-size: 3.5rem;
+  font-weight: 900px !important;
+}
+
+.projs {
+  margin: 13rem 0;
+}
+.proj-box-1 {
+  background: url("ubc.png");
+}
+.proj-box-2 {
+  background: url("excelsia.png");
+}
+
+.proj-box {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 80%;
+  border-radius: 0.4rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .proj-heading {
+    font-size: 2.5rem;
   }
 }
