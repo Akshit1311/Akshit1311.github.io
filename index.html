@@ -18,22 +18,34 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div id="vanta-net">
       <div class="mac-window">
         <div class="mac-header">
           <div class="mac-icons">
-            <span class="red-btn mac-icon"></span>
-            <span class="yellow-btn mac-icon"></span>
-            <span class="green-btn mac-icon"></span>
+            <span id="purple" class="purple-btn mac-icon"></span>
+            <span id="orange" class="orange-btn mac-icon"></span>
+            <span id="green" class="green-btn mac-icon"></span>
           </div>
         </div>
         <div class="terminal">
-          <p>Akshit1311@GH:~$ whoami</p>
+          <p>
+            <span class="text-red">root@a4748g</span
+            ><span class="text-white"
+              >:<span class="text-primary">~</span>$</span
+            >
+            whoami
+          </p>
           <p>
             Akshit Gupta | Web Developer | Budding Ethical Hacker<br /><br />
-            Akshit1311@GH:~$
+            <span class="text-red">root@a4748g</span
+            ><span class="text-white"
+              >:<span class="text-primary">~</span>$</span
+            >
           </p>
         </div>
       </div>
@@ -59,6 +71,12 @@
         </div>
       </div>
     </section>
+    <!-- 
+    <div class="theme-btns">
+      <span id="purple" class="theme-circ"></span>
+      <span id="orange" class="theme-circ"></span>
+      <span id="green" class="theme-circ"></span>
+    </div> -->
 
     <!-- Bootstrap JS  -->
     <script

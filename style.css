@@ -4,6 +4,10 @@
   font-family: "Share Tech Mono", monospace;
 }
 
+body {
+  overflow: hidden;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Share+Tech+Mono&display=swap");
 :root {
   --text-orange: rgb(255, 136, 0);
@@ -19,7 +23,7 @@
 
 @media screen and (max-width: 800px) {
   :root {
-    --height: 200px;
+    --height: 250px;
     --width: 70%;
   }
 }
@@ -49,30 +53,38 @@
 }
 
 .mac-icons {
-  width: 15%;
-  height: 30px;
+  width: 25%;
+  /* height: 30px; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.mac-icon {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  display: block;
-  box-shadow: 1px 1px 10px 1px gray;
-  margin: 0 5px;
+.text-red {
+  color: red;
 }
 
-.red-btn {
-  background: red;
+.mac-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: block;
+  margin: 0.5rem 5px;
+  cursor: pointer;
 }
-.yellow-btn {
-  background: rgb(255, 230, 0);
+
+.mac-icon:hover {
+  transform: scale(1.1);
+}
+
+.purple-btn {
+  background: var(--text-purple);
+}
+.orange-btn {
+  background: var(--text-orange);
 }
 .green-btn {
-  background: green;
+  background: var(--text-green);
 }
 
 .terminal {
@@ -82,9 +94,52 @@
   /* font-family: "Roboto", sans-serif; */
 }
 
+.theme-btns {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  transform: translate(0, -50%);
+  /* background: black; */
+}
+.theme-circ {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  z-index: 3;
+  margin: 1rem 2rem;
+  cursor: pointer;
+}
+
+.theme-circ:hover {
+  transition: 0.3s;
+  transform: scale(1.3);
+}
+
+#orange {
+  background: var(--text-orange);
+  box-shadow: 1px 1px 10px 1px var(--text-orange);
+}
+#purple {
+  background: var(--text-purple);
+  box-shadow: 1px 1px 10px 1px var(--text-purple);
+}
+
+#green {
+  background: var(--text-green);
+  box-shadow: 1px 1px 10px 1px var(--text-green);
+}
+
 @media screen and (max-width: 800px) {
   .mac-icons {
     width: 35%;
+  }
+
+  .mac-icon {
+    height: 15px;
+    width: 15px;
   }
 
   .terminal {
