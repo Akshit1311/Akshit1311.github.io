@@ -3,16 +3,20 @@
   padding: ;
   font-family: "Share Tech Mono", monospace;
 }
-
+/* 
 body {
   overflow: hidden;
-}
+} */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Share+Tech+Mono&display=swap");
 :root {
   --text-orange: rgb(255, 136, 0);
+  --text-yellow: rgb(255, 196, 0);
   --text-purple: rgb(161, 3, 148);
   --text-green: rgb(25, 175, 32);
+  --text-blue: rgb(58, 156, 248);
+  --text-red: rgb(189, 14, 14);
+
   --main-text-color: var(--text-green);
 
   --height: 400px;
@@ -25,6 +29,81 @@ body {
   :root {
     --height: 250px;
     --width: 70%;
+  }
+}
+
+/* .preloader {
+  background: radial-gradient(rgb(8 12 18), rgb(10 12 16));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 99999;
+  width: 100%;
+
+} */
+
+.preload {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(rgb(10, 12, 16), rgb(10, 12, 16));
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preload img {
+  clip-path: circle(35%);
+  /* transform: scale(1.3); */
+}
+
+.preload-img::before {
+  content: "";
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px dotted rgb(35, 51, 82);
+  animation: 2s waves infinite ease-in-out;
+}
+.preload-img::after {
+  content: "";
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: 2s waves infinite ease-in-out;
+  opacity: 0.25;
+  border-radius: 50%;
+  border: 2px solid rgb(35, 51, 82);
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.25);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .preload-img::before {
+    height: 350px;
+    width: 350px;
+  }
+  .preload-img::after {
+    height: 550px;
+    width: 550px;
   }
 }
 
@@ -77,15 +156,27 @@ body {
   transform: scale(1.1);
 }
 
-.purple-btn {
+/* .purple-btn {
   background: var(--text-purple);
 }
 .orange-btn {
   background: var(--text-orange);
-}
+} */
 .green-btn {
   background: var(--text-green);
+  box-shadow: 1px 1px 10px 1px var(--text-green);
 }
+.yellow-btn {
+  background: var(--text-yellow);
+  box-shadow: 1px 1px 10px 1px var(--text-yellow);
+}
+.red-btn {
+  background: var(--text-red);
+  box-shadow: 1px 1px 10px 1px var(--text-red);
+}
+/* .blue-btn {
+  background: var(--text-blue);
+} */
 
 .terminal {
   color: var(--main-text-color);
@@ -96,12 +187,11 @@ body {
 
 .theme-btns {
   position: fixed;
-  left: 0;
-  top: 50%;
+  left: 50%;
+  top: 0;
   display: flex;
-  flex-direction: column;
   z-index: 2;
-  transform: translate(0, -50%);
+  transform: translate(-50%, 0);
   /* background: black; */
 }
 .theme-circ {
@@ -127,6 +217,11 @@ body {
   box-shadow: 1px 1px 10px 1px var(--text-purple);
 }
 
+#blue {
+  background: var(--text-blue);
+  box-shadow: 1px 1px 10px 1px var(--text-blue);
+}
+
 #green {
   background: var(--text-green);
   box-shadow: 1px 1px 10px 1px var(--text-green);
@@ -135,6 +230,12 @@ body {
 @media screen and (max-width: 800px) {
   .mac-icons {
     width: 35%;
+  }
+
+  .theme-circ {
+    height: 30px;
+    width: 30px;
+    margin: 1rem;
   }
 
   .mac-icon {
