@@ -99,5 +99,7 @@ $(".theme-circ").click((event) => {
 });
 
 $(document).ready(() => {
-  $(".preload").addClass("d-none");
+  setTimeout(() => {
+    $(".preload").addClass("d-none");
+  }, 10000);
 });
