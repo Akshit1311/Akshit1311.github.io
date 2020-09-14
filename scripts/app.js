@@ -5,6 +5,21 @@ const textGreen = 0x25b303;
 
 let root = document.documentElement;
 
+console.log($(window).width(), "width");
+
+const screenWidth = $(window).width();
+
+isMob = screenWidth < 600 ? true : false;
+
+console.log(isMob);
+
+let vantaPoints = 10.0;
+// let vantaPoints = 10.0;
+let vantaMaxDistance = 21.0;
+// let vantaMaxDistance = 21.0;
+let vantaSpacing = isMob ? 20.0 : 16.0;
+// let vantaSpacing = 16.0;
+
 const startNet = (themeColor) => {
   $("canvas").remove(".vanta-canvas");
 
@@ -19,9 +34,9 @@ const startNet = (themeColor) => {
     scaleMobile: 1,
     color: themeColor,
     backgroundColor: 0x242322,
-    points: 10.0,
-    maxDistance: 21.0,
-    spacing: 16.0,
+    points: vantaPoints,
+    maxDistance: vantaMaxDistance,
+    spacing: vantaSpacing,
   });
 };
 

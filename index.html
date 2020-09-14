@@ -21,72 +21,124 @@
 
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="preload">
-      <div class="preload-img">
-        <img
-          src="https://i.giphy.com/media/mX1bWOEGPIAY1yhmKI/giphy.webp"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <div class="theme-btns">
-      <span id="purple" class="purple-btn theme-circ"></span>
-      <span id="orange" class="orange-btn theme-circ"></span>
-      <span id="blue" class="blue-btn theme-circ"></span>
-      <span id="green" class="green-btn theme-circ"></span>
-    </div>
-
-    <div id="vanta-net">
-      <div class="mac-window">
+      <div class="loading">
         <div class="mac-header">
           <div class="mac-icons">
             <span class="red-btn mac-icon"></span>
             <span class="yellow-btn mac-icon"></span>
             <span class="green-btn mac-icon"></span>
+            <span class="text-white mac-header-text">root@a4748g:~</span>
           </div>
-        </div>
-        <div class="terminal">
-          <p>
-            <span class="text-red">root@a4748g</span
-            ><span class="text-white"
-              >:<span class="text-primary">~</span>$</span
-            >
-            whoami
-          </p>
-          <p>
-            Akshit Gupta | Web Developer | Budding Ethical Hacker<br /><br />
-            <span class="text-red">root@a4748g</span
-            ><span class="text-white"
-              >:<span class="text-primary">~</span>$</span
-            >
-          </p>
         </div>
       </div>
     </div>
 
-    <section id="projects">
-      <div class="projects">
-        <div class="container">
-          <h1 class="text-center proj-heading">My Work</h1>
+    <!-- <div class="theme-btns">
+      <span id="purple" class="purple-btn theme-circ"></span>
+      <span id="orange" class="orange-btn theme-circ"></span>
+      <span id="blue" class="blue-btn theme-circ"></span>
+      <span id="green" class="green-btn theme-circ"></span>
+    </div> -->
 
-          <div class="row mt-4 projs">
-            <div class="col-lg-6">
-              <a href="https://ubconsulting.in">
-                <div class="proj-box proj-box-1"></div>
+    <div id="vanta-net">
+      <div class="display-1">
+        <div class="mac-window">
+          <div class="mac-header">
+            <div class="mac-icons">
+              <span class="red-btn mac-icon"></span>
+              <span class="yellow-btn mac-icon"></span>
+              <span class="green-btn mac-icon"></span>
+              <span class="text-white mac-header-text">root@a4748g:~</span>
+            </div>
+          </div>
+          <div class="terminal">
+            <p>
+              <span class="text-red">root@a4748g</span
+              ><span class="text-white"
+                >:<span class="text-primary">~</span>$</span
+              >
+              <span class="cmd"></span><span class="blinker">|</span>
+            </p>
+            <p class="result-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <section > -->
+      <div id="projs" class="projects">
+        <div class="container">
+          <h1 class="text-center proj-heading text-white">My Work</h1>
+
+          <div class="projs">
+            <div class="proj-contain">
+              <a
+                target="_blank"
+                class="proj-link"
+                href="https://excelsia.webquanta.in"
+              >
+                <div class="proj-box proj-box-1">
+                  <div class="proj-overlay">
+                    <div class="proj-logo ubc" alt=""></div>
+                    <div class="proj-badges">
+                      <span class="proj-badge">React</span>
+                      <span class="proj-badge">CSS</span>
+                      <span class="proj-badge">Javascript</span>
+                      <span class="proj-badge">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
               </a>
             </div>
-            <div class="col-lg-6">
-              <a href="https://excelsia.webquanta.in">
-                <div class="proj-box proj-box-2"></div>
+            <div class="proj-contain">
+              <a target="_blank" href="https://excelsia.webquanta.in">
+                <div class="proj-box proj-box-2">
+                  <div class="proj-overlay">
+                    <div class="proj-logo excelsia" alt=""></div>
+                    <div class="proj-badges">
+                      <span class="proj-badge">React</span>
+                      <span class="proj-badge">CSS</span>
+                      <span class="proj-badge">Javascript</span>
+                      <span class="proj-badge">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="proj-contain">
+              <a target="_blank" href="https://excelsia.webquanta.in">
+                <div class="proj-box proj-box-3">
+                  <div class="proj-overlay">
+                    <div class="proj-logo idc" alt=""></div>
+                    <div class="proj-badges">
+                      <span class="proj-badge">EJS</span>
+                      <span class="proj-badge">Node.js</span>
+                      <span class="proj-badge">Express</span>
+                      <span class="proj-badge">CSS</span>
+                      <span class="proj-badge">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
               </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <!-- </section> -->
+    </div>
+
+    <a href="#projs">
+      <img src="./images/animatedme.png" alt="" class="github-icon" />
+    </a>
+
     <!-- 
     <div class="theme-btns">
       <span id="purple" class="theme-circ"></span>
@@ -111,6 +163,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="app.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/typer.js"></script>
   </body>
 </html>
