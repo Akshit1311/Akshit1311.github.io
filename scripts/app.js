@@ -17,7 +17,7 @@ let vantaPoints = 10.0;
 // let vantaPoints = 10.0;
 let vantaMaxDistance = 21.0;
 // let vantaMaxDistance = 21.0;
-let vantaSpacing = isMob ? 20.0 : 16.0;
+let vantaSpacing = isMob ? 18.0 : 16.0;
 // let vantaSpacing = 16.0;
 
 const startNet = (themeColor) => {
@@ -99,7 +99,7 @@ $(".theme-circ").click((event) => {
 });
 
 $(document).ready(() => {
-  setTimeout(() => {
-    $(".preload").addClass("d-none");
-  }, 10000);
+  $(".preload").addClass("d-none");
+  // setTimeout(() => {
+  // }, 10000);
 });
