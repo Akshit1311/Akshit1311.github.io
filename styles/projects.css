@@ -1,0 +1,128 @@
+/* .browser {
+  height: 90%;
+  overflow: hidden;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+} */
+
+.mac-window {
+  /* transform: scale(0.5); */
+}
+
+iframe {
+  width: 190%;
+  min-height: 2000px;
+  height: auto;
+  border: 0px;
+  zoom: 0.55;
+  -moz-transform: scale(0.55);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.55);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.55);
+  -webkit-transform-origin: 0 0;
+}
+
+.gallery {
+  /* background: red; */
+  height: 100%;
+  width: 100%;
+  /* margin: 5rem; */
+  position: sticky;
+}
+.excelsia {
+  background: url("../images/projects/excelsia/excelsia.png");
+}
+
+.ubc {
+  background: url("../images/projects/ubc/ubc.png");
+}
+
+.acrilos {
+  background: url("../images/projects/acrilos/acrilos.png");
+}
+
+.proj {
+  height: 200px;
+  width: 350px;
+  background-position: center;
+  background-size: cover;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.proj-desc {
+  transform: scale(0.8);
+  position: absolute;
+}
+
+.proj-win {
+  transform: scale(0.95);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.mac-site {
+  height: 90%;
+  /* background: url("../images/projects/excelsia/excelsia.png"); */
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.car-win {
+  height: 90%;
+  width: 90%;
+
+  margin: 1rem 0;
+}
+
+/* Mob Display */
+.display-2 {
+  display: none;
+  /* background: red; */
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    margin-top: 15rem;
+    /* padding: 10rem 0; */
+    margin-bottom: 3rem;
+  }
+
+  .mac-window {
+    margin: 2rem 0;
+  }
+
+  .display-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10rem;
+  }
+  .display-1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  .proj-desc {
+    display: none;
+  }
+  body {
+    overflow-y: ;
+  }
+  .proj-win {
+    right: 50%;
+    transform: translate(50%);
+  }
+}
+@media screen and (min-width: 800px) {
+  .gallery {
+    margin: 5rem;
+  }
+}

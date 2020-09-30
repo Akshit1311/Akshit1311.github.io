@@ -30,6 +30,13 @@ body::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
 }
 
+a {
+  color: white !important;
+}
+.active {
+  text-decoration: underline;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Share+Tech+Mono&display=swap");
 :root {
   --text-orange: rgb(255, 136, 0);
@@ -168,6 +175,7 @@ canvas {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  padding-top: 3rem;
 }
 
 .nav {
@@ -181,6 +189,10 @@ canvas {
   width: calc(var(--width) + 100px);
   /* background: black; */
   float: right;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .social {
@@ -438,7 +450,7 @@ canvas {
 }
 @media screen and (max-width: 1100px) {
   .social {
-    margin-left: 50%;
+    /* margin-left: 50%; */
     transform: translate(-50%) scale(1) !important;
   }
 }
